@@ -40,6 +40,9 @@ body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-
 .nav-cta{background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 22px;border-radius:30px;text-decoration:none;transition:all .25s;white-space:nowrap}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.nav-call{display:none;width:40px;height:40px;background:var(--olive);border-radius:50%;align-items:center;justify-content:center;text-decoration:none;flex-shrink:0;transition:all .2s}
+.nav-call:hover{background:var(--olive-light);transform:scale(1.07)}
+.nav-call svg{width:17px;height:17px;fill:var(--white)}
 .hamburger span{display:block;width:22px;height:2px;background:var(--olive);margin:5px 0;border-radius:2px}
 .mobile-menu{position:fixed;inset:0;z-index:300;background:var(--olive);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
 .mobile-menu.open{opacity:1;pointer-events:all}
@@ -121,7 +124,7 @@ body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-
 footer{background:var(--olive);color:var(--white);padding:72px 48px 0}
 .footer-inner{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.1)}
 .f-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.f-logo-img{height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85}
+.f-logo-img{height:32px;width:auto;object-fit:contain;opacity:.92}
 .f-brand-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--white);letter-spacing:-.01em}
 .f-tagline{font-size:11.5px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
 .f-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:20px;max-width:300px}
@@ -154,7 +157,8 @@ footer{background:var(--olive);color:var(--white);padding:72px 48px 0}
 }
 @media(max-width:768px){
   .navbar{padding:0 20px}
-  .nav-links,.nav-divider,.nav-tagline,.nav-phone{display:none!important}
+  .nav-links,.nav-divider,.nav-tagline,.nav-phone,.nav-cta{display:none!important}
+  .nav-call{display:flex!important}
   .hamburger{display:block!important}
   .page-hero{padding:100px 20px 60px}
   .section{padding:64px 20px}
@@ -373,6 +377,11 @@ mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
 const ro = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="gsap-global.js"></script>
 </body>
 </html>
+
+
 

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="About Didsbury Boiler Servicing & Repair — meet Robin and Dom, the Gas Safe registered engineers behind South Manchester's most trusted boiler company."/>
+<meta property="og:title" content="About Us | Didsbury Boiler Servicing & Repair"/>
+<meta property="og:description" content="Two local engineers. One mission. Honest, reliable boiler servicing and repair across South Manchester."/>
+<title>About | Didsbury Boiler Servicing & Repair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<style>
+:root{
+  --olive:#2E3B1E;--olive-mid:#3A4A26;--olive-light:#4A5E30;
+  --cream:#F0EBE1;--cream2:#E8E0D4;--cream3:#DDD4C6;--cream4:#D4C9B8;
+  --white:#FDFAF6;--ink:#1A1A14;--ink2:#4A4840;--ink3:#7A7568;
+  --amber:#D4A024;--border:rgba(26,26,20,0.10);
+  --font-head:'Epilogue',sans-serif;--font-body:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);--ease2:cubic-bezier(0.16,1,0.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* ─── NAVBAR ─── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;padding:0 48px;background:var(--white);border-bottom:1px solid var(--border);transition:all .35s var(--ease)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-img{height:36px;width:auto;object-fit:contain;display:block}
+.nav-brand{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--olive);letter-spacing:-.01em;white-space:nowrap}
+.nav-divider{width:1px;height:28px;background:var(--border);margin:0 18px;flex-shrink:0}
+.nav-tagline{font-size:12px;color:var(--ink3);letter-spacing:.02em;white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;margin-left:auto;margin-right:16px}
+.nav-links a{display:flex;align-items:center;gap:4px;text-decoration:none;color:var(--ink2);font-size:13.5px;font-weight:500;padding:6px 14px;border-radius:20px;transition:all .2s;letter-spacing:.01em;white-space:nowrap}
+.nav-links a:hover{background:rgba(46,59,30,.07);color:var(--olive)}
+.nav-links a .plus{font-size:11px;opacity:.6}
+.nav-links a.active{color:var(--olive);font-weight:700}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-phone{font-size:13.5px;font-weight:600;color:var(--ink2);text-decoration:none}
+.nav-phone:hover{color:var(--olive)}
+.nav-cta{background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 22px;border-radius:30px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.hamburger span{display:block;width:22px;height:2px;background:var(--olive);margin:5px 0;transition:all .3s;border-radius:2px}
+
+/* ─── MOBILE MENU ─── */
+.mobile-menu{position:fixed;inset:0;z-index:300;background:var(--olive);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;font-size:24px;color:rgba(255,255,255,.7);line-height:1}
+.mobile-close:hover{color:var(--white)}
+.mobile-menu ul{list-style:none;text-align:center;padding:0}
+.mobile-menu ul li{margin-bottom:12px}
+.mobile-menu ul li a{font-family:var(--font-head);font-weight:800;font-size:36px;color:white;text-decoration:none;text-transform:uppercase;letter-spacing:-.02em;transition:color .2s}
+.mobile-menu ul li a:hover{color:var(--amber)}
+.mobile-phone{color:rgba(255,255,255,.65);font-size:17px;font-weight:500;text-decoration:none;margin-top:8px}
+
+/* ─── PAGE HERO ─── */
+.page-hero{background:var(--olive);padding:120px 48px 80px;position:relative;overflow:hidden;min-height:320px;display:flex;align-items:flex-end}
+.page-hero-ghost{position:absolute;bottom:-20px;right:-10px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.page-hero-inner{position:relative;z-index:2;max-width:680px}
+.page-hero .label-tag{color:rgba(255,255,255,.45);margin-bottom:12px}
+.page-hero h1{font-family:var(--font-head);font-weight:900;font-size:clamp(40px,6vw,72px);line-height:1.0;letter-spacing:-.03em;color:var(--white);text-transform:uppercase;margin-bottom:20px}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;max-width:520px}
+
+/* ─── SECTION BASE ─── */
+.section{padding:100px 48px}
+.label-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.sec-h2{font-family:var(--font-head);font-weight:800;font-size:clamp(34px,4.5vw,56px);line-height:1.02;letter-spacing:-.025em;color:var(--ink);margin-bottom:20px}
+.sec-lead{font-size:16px;color:var(--ink2);max-width:600px;line-height:1.75}
+
+/* ─── STORY SECTION ─── */
+.story-section{background:var(--cream);padding:100px 48px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-left{}
+.story-left p{font-size:16px;color:var(--ink2);line-height:1.8;margin-bottom:20px}
+.story-left p:last-child{margin-bottom:0}
+.story-right{}
+.story-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:16px;overflow:hidden;margin-bottom:24px}
+.stat-block{background:var(--white);padding:32px 28px}
+.stat-num{font-family:var(--font-head);font-weight:900;font-size:52px;color:var(--olive);letter-spacing:-.04em;line-height:1}
+.stat-label{font-size:13px;color:var(--ink3);margin-top:6px;line-height:1.4}
+.story-badge{background:var(--olive);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:16px}
+.story-badge-icon{width:44px;height:44px;background:rgba(255,255,255,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.story-badge-icon svg{width:22px;height:22px;fill:var(--cream)}
+.story-badge-text{font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.5}
+.story-badge-text strong{display:block;color:var(--white);font-weight:600;margin-bottom:2px}
+
+/* ─── TEAM PROFILES ─── */
+.team-section{background:var(--white);padding:100px 48px}
+.team-profiles-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:56px}
+.profile-card{border-radius:20px;overflow:hidden;background:var(--cream);border:1px solid var(--border)}
+.profile-img{width:100%;height:400px;object-fit:cover;object-position:top;display:block}
+.profile-body{padding:32px 32px 36px}
+.profile-role{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.profile-name{font-family:var(--font-head);font-weight:800;font-size:32px;letter-spacing:-.02em;color:var(--olive);margin-bottom:16px}
+.profile-bio{font-size:14.5px;color:var(--ink2);line-height:1.75;margin-bottom:24px}
+.profile-tags{display:flex;flex-wrap:wrap;gap:8px}
+.profile-tag{background:var(--cream2);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:500;color:var(--ink2)}
+
+/* ─── VALUES SECTION ─── */
+.values-section{background:var(--cream2);padding:100px 48px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.value-card{background:var(--white);border-radius:16px;padding:36px 28px;border:1px solid var(--border)}
+.value-num{font-family:var(--font-head);font-weight:900;font-size:11px;letter-spacing:.12em;color:var(--ink3);margin-bottom:20px}
+.value-icon{width:48px;height:48px;background:var(--olive);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.value-icon svg{width:22px;height:22px;fill:var(--white)}
+.value-card h3{font-family:var(--font-head);font-weight:700;font-size:20px;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px}
+.value-card p{font-size:14px;color:var(--ink2);line-height:1.65}
+
+/* ─── GAS SAFE SECTION ─── */
+.gassafe-section{background:var(--olive);padding:80px 48px;position:relative;overflow:hidden}
+.gassafe-ghost{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-head);font-weight:900;font-size:clamp(80px,16vw,240px);color:rgba(255,255,255,.04);white-space:nowrap;letter-spacing:-.04em;pointer-events:none;user-select:none}
+.gassafe-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.gassafe-left .label-tag{color:rgba(255,255,255,.4)}
+.gassafe-left .sec-h2{color:var(--white)}
+.gassafe-left p{font-size:15px;color:rgba(255,255,255,.62);line-height:1.8;margin-bottom:20px}
+.gassafe-left p:last-child{margin-bottom:0}
+.gassafe-creds{display:flex;flex-direction:column;gap:16px}
+.gassafe-cred{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 20px}
+.gassafe-cred-icon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.gassafe-cred-icon svg{width:20px;height:20px;fill:var(--cream)}
+.gassafe-cred-text strong{display:block;font-size:14px;font-weight:600;color:var(--white);margin-bottom:2px}
+.gassafe-cred-text span{font-size:12.5px;color:rgba(255,255,255,.5)}
+
+/* ─── CTA BAND ─── */
+.cta-band{background:var(--olive);padding:80px 48px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-ghost{position:absolute;bottom:-20px;right:-20px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.cta-band h2{font-family:var(--font-head);font-weight:900;font-size:clamp(34px,5vw,62px);color:var(--white);letter-spacing:-.03em;text-transform:uppercase;line-height:.95;position:relative;z-index:1}
+.cta-band-right{display:flex;flex-direction:column;gap:16px;align-items:flex-start;position:relative;z-index:1}
+.cta-phone-hero{display:flex;align-items:center;gap:12px;text-decoration:none}
+.cta-phone-hero svg{width:22px;height:22px;fill:rgba(255,255,255,.7)}
+.cta-phone-hero span{font-family:var(--font-head);font-weight:900;font-size:clamp(26px,4vw,44px);color:var(--white);letter-spacing:-.025em}
+.cta-btn-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn-cream{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--olive);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:13px 28px;border-radius:30px;text-decoration:none;transition:all .25s}
+.btn-cream:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.btn-outline-cream{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.85);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 28px;border-radius:30px;border:1.5px solid rgba(255,255,255,.3);text-decoration:none;transition:all .25s}
+.btn-outline-cream:hover{border-color:var(--white);color:var(--white)}
+.cta-note{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.02em}
+
+/* ─── FOOTER ─── */
+footer{background:var(--olive);color:var(--white);padding:72px 48px 0}
+.footer-inner{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.f-logo-img{height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85}
+.f-brand-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--white);letter-spacing:-.01em}
+.f-tagline{font-size:11.5px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.f-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:20px;max-width:300px}
+.f-social{display:flex;gap:8px}
+.fsoc{width:34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s}
+.fsoc:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.1)}
+.fsoc svg{width:15px;height:15px;fill:rgba(255,255,255,.55)}
+.f-col h4{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.92)}
+.f-contact-line{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.f-contact-line a,.f-contact-line span{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;line-height:1.5}
+.f-contact-line a:hover{color:rgba(255,255,255,.92)}
+.f-google-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--amber);text-decoration:none;font-weight:600}
+.f-google-link:hover{text-decoration:underline}
+.footer-bottom{padding:22px 0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-legal{display:flex;gap:18px}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.65)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .story-grid{grid-template-columns:1fr}
+  .gassafe-inner{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .navbar{padding:0 20px}
+  .nav-links,.nav-divider,.nav-tagline,.nav-phone{display:none!important}
+  .hamburger{display:block!important}
+  .page-hero{padding:100px 20px 60px}
+  .story-section,.team-section,.values-section,.gassafe-section,.section{padding-left:20px;padding-right:20px}
+  .story-stats{grid-template-columns:1fr 1fr}
+  .team-profiles-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .cta-band{padding:60px 20px;flex-direction:column}
+  footer{padding:60px 20px 0}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  .values-grid{grid-template-columns:1fr}
+  .story-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Didsbury Boiler" class="nav-logo-img"/>
+    <span class="nav-brand">Didsbury Boiler</span>
+  </a>
+  <div class="nav-divider"></div>
+  <span class="nav-tagline">Gas Safe Registered Engineers</span>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="plus">+</span> Home</a></li>
+    <li><a href="about.html"><span class="plus">+</span> About</a></li>
+    <li><a href="services.html"><span class="plus">+</span> Services</a></li>
+    <li><a href="areas.html"><span class="plus">+</span> Areas</a></li>
+    <li><a href="reviews.html"><span class="plus">+</span> Reviews</a></li>
+    <li><a href="faqs.html"><span class="plus">+</span> FAQs</a></li>
+    <li><a href="contact.html"><span class="plus">+</span> Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:07921193353" class="nav-phone">07921 193 353</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="areas.html">Areas</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:07921193353" class="mobile-phone">07921 193 353</a>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<section class="page-hero">
+  <div class="page-hero-ghost">ABOUT</div>
+  <div class="page-hero-inner">
+    <span class="label-tag">Our Story</span>
+    <h1>Two Engineers.<br/>One Mission.</h1>
+    <p>We started Didsbury Boiler Servicing &amp; Repair because South Manchester deserved better — straightforward pricing, same-day responses and engineers who actually care about the work they do.</p>
+  </div>
+</section>
+
+<!-- ─── STORY SECTION ─── -->
+<section class="story-section">
+  <div class="story-grid">
+    <div class="story-left reveal">
+      <span class="label-tag">How It Started</span>
+      <h2 class="sec-h2">Built on trust, not sales targets</h2>
+      <p>Robin and Dom started Didsbury Boiler Servicing &amp; Repair out of frustration. As experienced gas engineers, they'd seen too many customers overcharged, misled, or left waiting days for a simple fix. They knew they could do it differently.</p>
+      <p>Based in Didsbury, they set out to build a local boiler company rooted in honesty — transparent pricing before any work begins, no call-out fee surprises, and a commitment to getting it right first time.</p>
+      <p>Since launching, they've built a reputation across South Manchester for being the engineers you can actually trust. Every five-star review reflects the same thing: straightforward people doing quality work.</p>
+    </div>
+    <div class="story-right reveal d2">
+      <div class="story-stats">
+        <div class="stat-block">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years combined experience in gas boiler engineering</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">5.0</div>
+          <div class="stat-label">Star rating on Google and Rated People</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Emergency breakdown response available</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">£0</div>
+          <div class="stat-label">Hidden fees — price agreed before we start</div>
+        </div>
+      </div>
+      <div class="story-badge">
+        <div class="story-badge-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <div class="story-badge-text">
+          <strong>RK Gas Safe Registered</strong>
+          Gas Safe registered and fully insured — your legal protection as a homeowner.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TEAM PROFILES ─── -->
+<section class="team-section">
+  <span class="label-tag">Meet the Team</span>
+  <h2 class="sec-h2">The engineers behind the name</h2>
+  <div class="team-profiles-grid">
+    <div class="profile-card reveal d1">
+      <img class="profile-img" src="rob.webp" alt="Robin Kenny — Co-founder &amp; Gas Engineer" loading="lazy"/>
+      <div class="profile-body">
+        <div class="profile-role">Co-founder &amp; Lead Gas Engineer</div>
+        <div class="profile-name">Robin</div>
+        <p class="profile-bio">Robin is the driving force behind Didsbury Boiler. With over a decade of hands-on experience across boiler servicing, repair and installation, he's the one on the tools day in, day out. Robin set up the company after seeing too many South Manchester homeowners overcharged by larger firms — his philosophy is simple: be honest, be reliable, and do the job properly first time.</p>
+        <p class="profile-bio">Gas Safe registered under RK Gas Safe, Robin handles everything from annual services and pressure fixes to full boiler installations and emergency breakdowns.</p>
+        <div class="profile-tags">
+          <span class="profile-tag">Gas Safe Registered</span>
+          <span class="profile-tag">10+ Years Experience</span>
+          <span class="profile-tag">Boiler Installation</span>
+          <span class="profile-tag">Emergency Callouts</span>
+          <span class="profile-tag">Co-Founder</span>
+        </div>
+      </div>
+    </div>
+    <div class="profile-card reveal d2">
+      <img class="profile-img" src="dom.webp" alt="Dom — Lead Boiler Engineer" loading="lazy"/>
+      <div class="profile-body">
+        <div class="profile-role">Lead Boiler Engineer</div>
+        <div class="profile-name">Dom</div>
+        <p class="profile-bio">Dom joined the team as a qualified gas engineer and quickly became an essential part of the operation. A parts specialist and diagnostics expert, Dom has a knack for identifying the root cause of complex boiler faults — often saving customers from unnecessary replacements. His calm, methodical approach means customers always feel informed and in control.</p>
+        <p class="profile-bio">Whether it's a tricky error code, a recurring fault no one else could diagnose, or a same-day emergency, Dom is the one who gets it sorted.</p>
+        <div class="profile-tags">
+          <span class="profile-tag">Gas Safe Registered</span>
+          <span class="profile-tag">Parts Specialist</span>
+          <span class="profile-tag">Fault Diagnostics</span>
+          <span class="profile-tag">Boiler Repair</span>
+          <span class="profile-tag">Same-Day Response</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VALUES SECTION ─── -->
+<section class="values-section">
+  <div style="text-align:center;margin-bottom:0">
+    <span class="label-tag">What We Stand For</span>
+    <h2 class="sec-h2">Our principles, not just our pitch</h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-card reveal d1">
+      <div class="value-num">01</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      </div>
+      <h3>Radical Transparency</h3>
+      <p>You'll always know the price before we start. No surprises, no extras added on at the end. We quote honestly and stick to it — even if the job turns out to be more complex than expected.</p>
+    </div>
+    <div class="value-card reveal d2">
+      <div class="value-num">02</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h3>First-Visit Fix Rate</h3>
+      <p>We carry a comprehensive stock of the most common boiler parts on every visit. Our goal is to diagnose and fix your boiler in a single visit — not drag it out over multiple call-outs.</p>
+    </div>
+    <div class="value-card reveal d3">
+      <div class="value-num">03</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3>Local, Independent</h3>
+      <p>We're not a franchise. We're not a call centre. We're two local engineers who live and work in South Manchester. When you call us, you speak to us — and we show up ourselves.</p>
+    </div>
+    <div class="value-card reveal d4">
+      <div class="value-num">04</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Same-Day Response</h3>
+      <p>Boiler problems don't keep business hours. We aim to respond to all calls the same day, and offer emergency breakdown response for those situations that simply can't wait.</p>
+    </div>
+    <div class="value-card reveal d1">
+      <div class="value-num">05</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Fully Insured &amp; Gas Safe</h3>
+      <p>All our work is covered by full public liability insurance. We're Gas Safe registered — which isn't just a badge, it's a legal requirement. You should never let an unregistered engineer near your gas appliances.</p>
+    </div>
+    <div class="value-card reveal d2">
+      <div class="value-num">06</div>
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>Honest Advice, Always</h3>
+      <p>If your boiler doesn't need replacing, we'll tell you. If a repair isn't worth the cost, we'll say so. We'd rather give you the right advice than make a sale we'll regret.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GAS SAFE SECTION ─── -->
+<section class="gassafe-section">
+  <div class="gassafe-ghost">GAS SAFE</div>
+  <div class="gassafe-inner">
+    <div class="gassafe-left reveal">
+      <span class="label-tag">Credentials &amp; Registration</span>
+      <h2 class="sec-h2">Legally registered. Fully covered.</h2>
+      <p>Gas Safe registration isn't optional — it's the law. Anyone working on your gas appliances must be Gas Safe registered. We're registered under RK Gas Safe, which means every job we do is legally compliant and fully insured.</p>
+      <p>You can verify our registration at any time on the official Gas Safe Register website. We'll always carry our ID card on every visit — ask to see it.</p>
+    </div>
+    <div class="gassafe-creds reveal d2">
+      <div class="gassafe-cred">
+        <div class="gassafe-cred-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="gassafe-cred-text">
+          <strong>Gas Safe Registered</strong>
+          <span>RK Gas Safe — verified on the official register</span>
+        </div>
+      </div>
+      <div class="gassafe-cred">
+        <div class="gassafe-cred-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="gassafe-cred-text">
+          <strong>Fully Insured</strong>
+          <span>Public liability insurance on every job</span>
+        </div>
+      </div>
+      <div class="gassafe-cred">
+        <div class="gassafe-cred-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="gassafe-cred-text">
+          <strong>Gas Safe Certificates Issued</strong>
+          <span>All installation and safety work certificated</span>
+        </div>
+      </div>
+      <div class="gassafe-cred">
+        <div class="gassafe-cred-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <div class="gassafe-cred-text">
+          <strong>5.0 Stars on Google &amp; Rated People</strong>
+          <span>100% five-star reviews from real customers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ─── -->
+<section class="cta-band">
+  <div class="cta-ghost">CALL NOW</div>
+  <h2>Ready to book?<br/>Let's talk.</h2>
+  <div class="cta-band-right">
+    <a href="tel:07921193353" class="cta-phone-hero">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>07921 193 353</span>
+    </a>
+    <div class="cta-btn-row">
+      <a href="contact.html" class="btn-cream">Get a Free Quote</a>
+      <a href="services.html" class="btn-outline-cream">View Services</a>
+    </div>
+    <p class="cta-note">Same-day response available · Gas Safe Registered</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo.png" alt="Didsbury Boiler" class="f-logo-img"/>
+        <span class="f-brand-name">Didsbury Boiler</span>
+      </div>
+      <p class="f-tagline">Servicing &amp; Repair · South Manchester</p>
+      <p class="f-desc">Independent Gas Safe registered engineers. Honest, reliable boiler servicing and repair across South Manchester.</p>
+      <div class="f-social">
+        <a href="https://www.facebook.com/profile.php?id=100090288853644" target="_blank" rel="noopener" class="fsoc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/rkgassafe/" target="_blank" rel="noopener" class="fsoc" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.youtube.com/@DidsburyBoilerService" target="_blank" rel="noopener" class="fsoc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:var(--olive)"/></svg></a>
+        <a href="https://g.co/kgs/TGA6pHH" target="_blank" rel="noopener" class="fsoc" aria-label="Google Reviews"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93A8.01 8.01 0 0 1 4.07 13H6v-2H4.07A8.01 8.01 0 0 1 11 4.07V6h2V4.07A8.01 8.01 0 0 1 19.93 11H18v2h1.93A8.01 8.01 0 0 1 13 19.93z"/></svg></a>
+        <a href="https://www.ratedpeople.com/profile/rk-gas-safe" target="_blank" rel="noopener" class="fsoc" aria-label="Rated People"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navigation</h4>
+      <ul class="f-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="areas.html">Areas Covered</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul class="f-links">
+        <li><a href="services.html">Annual Service</a></li>
+        <li><a href="services.html">Boiler Repair</a></li>
+        <li><a href="services.html">Breakdown Response</a></li>
+        <li><a href="services.html">New Installation</a></li>
+        <li><a href="services.html">Pressure Problems</a></li>
+        <li><a href="faqs.html">Error Code Guide</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <div class="f-contact-line">
+        <a href="tel:07921193353">07921 193 353</a>
+        <a href="mailto:robin@didsburyboilerservice.co.uk">robin@didsburyboilerservice.co.uk</a>
+        <span>567a Wilmslow Rd<br/>Didsbury, Manchester M20 3QH</span>
+      </div>
+      <a href="https://g.co/kgs/TGA6pHH" class="f-google-link" target="_blank" rel="noopener">★ 5.0 on Google</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Didsbury Boiler Servicing &amp; Repair. RK Gas Safe Registered. All Rights Reserved.</p>
+    <div class="footer-legal">
+      <a href="https://www.didsburyboilerservice.co.uk/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/site-map" target="_blank" rel="noopener">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => { if (a.getAttribute('href') === currentPage) a.classList.add('active'); });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

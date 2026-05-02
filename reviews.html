@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Real reviews from homeowners across South Manchester. Didsbury Boiler Servicing & Repair — 5.0 on Google and Rated People."/>
+<meta property="og:title" content="Reviews | Didsbury Boiler Servicing & Repair"/>
+<meta property="og:description" content="See what our clients say. 5-star rated on Google and Rated People."/>
+<title>Reviews | Didsbury Boiler Servicing & Repair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<style>
+:root{
+  --olive:#2E3B1E;--olive-mid:#3A4A26;--olive-light:#4A5E30;
+  --cream:#F0EBE1;--cream2:#E8E0D4;--cream3:#DDD4C6;
+  --white:#FDFAF6;--ink:#1A1A14;--ink2:#4A4840;--ink3:#7A7568;
+  --amber:#D4A024;--border:rgba(26,26,20,0.10);
+  --font-head:'Epilogue',sans-serif;--font-body:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;padding:0 48px;background:var(--white);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-img{height:36px;width:auto;object-fit:contain;display:block}
+.nav-brand{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--olive);letter-spacing:-.01em;white-space:nowrap}
+.nav-divider{width:1px;height:28px;background:var(--border);margin:0 18px;flex-shrink:0}
+.nav-tagline{font-size:12px;color:var(--ink3);letter-spacing:.02em;white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;margin-left:auto;margin-right:16px}
+.nav-links a{display:flex;align-items:center;gap:4px;text-decoration:none;color:var(--ink2);font-size:13.5px;font-weight:500;padding:6px 14px;border-radius:20px;transition:all .2s;white-space:nowrap}
+.nav-links a:hover{background:rgba(46,59,30,.07);color:var(--olive)}
+.nav-links a .plus{font-size:11px;opacity:.6}
+.nav-links a.active{color:var(--olive);font-weight:700}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-phone{font-size:13.5px;font-weight:600;color:var(--ink2);text-decoration:none}
+.nav-phone:hover{color:var(--olive)}
+.nav-cta{background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 22px;border-radius:30px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.hamburger span{display:block;width:22px;height:2px;background:var(--olive);margin:5px 0;border-radius:2px}
+.mobile-menu{position:fixed;inset:0;z-index:300;background:var(--olive);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;font-size:24px;color:rgba(255,255,255,.7);line-height:1}
+.mobile-menu ul{list-style:none;text-align:center;padding:0}
+.mobile-menu ul li{margin-bottom:12px}
+.mobile-menu ul li a{font-family:var(--font-head);font-weight:800;font-size:36px;color:white;text-decoration:none;text-transform:uppercase;letter-spacing:-.02em}
+.mobile-menu ul li a:hover{color:var(--amber)}
+.mobile-phone{color:rgba(255,255,255,.65);font-size:17px;font-weight:500;text-decoration:none;margin-top:8px}
+
+.page-hero{background:var(--olive);padding:120px 48px 80px;position:relative;overflow:hidden;min-height:320px;display:flex;align-items:flex-end}
+.page-hero-ghost{position:absolute;bottom:-20px;right:-10px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.page-hero-inner{position:relative;z-index:2;max-width:680px}
+.page-hero .label-tag{color:rgba(255,255,255,.45);margin-bottom:12px}
+.page-hero h1{font-family:var(--font-head);font-weight:900;font-size:clamp(40px,6vw,72px);line-height:1.0;letter-spacing:-.03em;color:var(--white);text-transform:uppercase;margin-bottom:20px}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;max-width:520px}
+
+.section{padding:100px 48px}
+.label-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.sec-h2{font-family:var(--font-head);font-weight:800;font-size:clamp(34px,4.5vw,56px);line-height:1.02;letter-spacing:-.025em;color:var(--ink);margin-bottom:20px}
+.sec-h2.on-dark{color:var(--white)}
+.btn-olive{display:inline-flex;align-items:center;gap:8px;background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:30px;text-decoration:none;transition:all .25s}
+.btn-olive:hover{background:var(--olive-light);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--olive);font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:30px;border:1.5px solid var(--olive);text-decoration:none;transition:all .25s}
+.btn-outline:hover{background:var(--olive);color:var(--white)}
+
+/* ─── RATING BAR ─── */
+.rating-bar{background:var(--white);padding:48px}
+.rating-bar-inner{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.rating-pill-large{display:flex;align-items:center;gap:20px;background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:20px 28px;flex:1;min-width:240px}
+.rpl-score{font-family:var(--font-head);font-weight:900;font-size:52px;color:var(--olive);letter-spacing:-.04em;line-height:1}
+.rpl-info{}
+.rpl-platform{font-family:var(--font-head);font-weight:700;font-size:17px;color:var(--ink);margin-bottom:4px}
+.rpl-stars{display:flex;gap:3px;margin-bottom:4px}
+.rstar{width:15px;height:15px;fill:var(--amber)}
+.rpl-link{font-size:12.5px;color:var(--olive);text-decoration:none;font-weight:500}
+.rpl-link:hover{text-decoration:underline}
+
+/* ─── REVIEWS GRID ─── */
+.reviews-section{background:var(--cream)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.review-card{background:var(--white);border-radius:16px;padding:28px;border:1px solid var(--border);display:flex;flex-direction:column}
+.review-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.review-stars{display:flex;gap:3px}
+.platform-badge{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);background:var(--cream);border-radius:20px;padding:4px 10px}
+.review-text{font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:20px;font-style:italic;flex:1}
+.review-author{font-size:13px;font-weight:600;color:var(--ink)}
+.review-author span{font-weight:400;color:var(--ink3)}
+
+/* ─── LEAVE A REVIEW ─── */
+.leave-review-section{background:var(--white);padding:80px 48px;text-align:center}
+.leave-review-section h2{font-family:var(--font-head);font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-.025em;color:var(--ink);margin-bottom:12px}
+.leave-review-section p{font-size:16px;color:var(--ink2);margin-bottom:36px}
+.review-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ─── CTA BAND ─── */
+.cta-band{background:var(--olive);padding:80px 48px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-ghost{position:absolute;bottom:-20px;right:-20px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.cta-band h2{font-family:var(--font-head);font-weight:900;font-size:clamp(34px,5vw,62px);color:var(--white);letter-spacing:-.03em;text-transform:uppercase;line-height:.95;position:relative;z-index:1}
+.cta-band-right{display:flex;flex-direction:column;gap:16px;align-items:flex-start;position:relative;z-index:1}
+.cta-phone-hero{display:flex;align-items:center;gap:12px;text-decoration:none}
+.cta-phone-hero svg{width:22px;height:22px;fill:rgba(255,255,255,.7)}
+.cta-phone-hero span{font-family:var(--font-head);font-weight:900;font-size:clamp(26px,4vw,44px);color:var(--white);letter-spacing:-.025em}
+.cta-btn-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn-cream{display:inline-flex;align-items:center;background:var(--cream);color:var(--olive);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:13px 28px;border-radius:30px;text-decoration:none;transition:all .25s}
+.btn-cream:hover{background:var(--white);transform:translateY(-2px)}
+.btn-outline-cream{display:inline-flex;align-items:center;background:transparent;color:rgba(255,255,255,.85);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 28px;border-radius:30px;border:1.5px solid rgba(255,255,255,.3);text-decoration:none;transition:all .25s}
+.btn-outline-cream:hover{border-color:var(--white);color:var(--white)}
+.cta-note{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.02em}
+
+/* ─── FOOTER ─── */
+footer{background:var(--olive);color:var(--white);padding:72px 48px 0}
+.footer-inner{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.f-logo-img{height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85}
+.f-brand-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--white);letter-spacing:-.01em}
+.f-tagline{font-size:11.5px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.f-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:20px;max-width:300px}
+.f-social{display:flex;gap:8px}
+.fsoc{width:34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s}
+.fsoc:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.1)}
+.fsoc svg{width:15px;height:15px;fill:rgba(255,255,255,.55)}
+.f-col h4{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.92)}
+.f-contact-line{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.f-contact-line a,.f-contact-line span{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;line-height:1.5}
+.f-contact-line a:hover{color:rgba(255,255,255,.92)}
+.f-google-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--amber);text-decoration:none;font-weight:600}
+.f-google-link:hover{text-decoration:underline}
+.footer-bottom{padding:22px 0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-legal{display:flex;gap:18px}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.65)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
+
+@media(max-width:1100px){
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .navbar{padding:0 20px}
+  .nav-links,.nav-divider,.nav-tagline,.nav-phone{display:none!important}
+  .hamburger{display:block!important}
+  .page-hero{padding:100px 20px 60px}
+  .section{padding:64px 20px}
+  .rating-bar{padding:40px 20px}
+  .reviews-grid{grid-template-columns:1fr}
+  .leave-review-section{padding:60px 20px}
+  .cta-band{padding:60px 20px;flex-direction:column}
+  footer{padding:60px 20px 0}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Didsbury Boiler" class="nav-logo-img"/>
+    <span class="nav-brand">Didsbury Boiler</span>
+  </a>
+  <div class="nav-divider"></div>
+  <span class="nav-tagline">Gas Safe Registered Engineers</span>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="plus">+</span> Home</a></li>
+    <li><a href="about.html"><span class="plus">+</span> About</a></li>
+    <li><a href="services.html"><span class="plus">+</span> Services</a></li>
+    <li><a href="areas.html"><span class="plus">+</span> Areas</a></li>
+    <li><a href="reviews.html"><span class="plus">+</span> Reviews</a></li>
+    <li><a href="faqs.html"><span class="plus">+</span> FAQs</a></li>
+    <li><a href="contact.html"><span class="plus">+</span> Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:07921193353" class="nav-phone">07921 193 353</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="areas.html">Areas</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:07921193353" class="mobile-phone">07921 193 353</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-ghost">REVIEWS</div>
+  <div class="page-hero-inner">
+    <span class="label-tag">WHAT CLIENTS SAY</span>
+    <h1>What Our Clients Say</h1>
+    <p>Real feedback from homeowners across South Manchester. We let the work speak for itself.</p>
+  </div>
+</section>
+
+<!-- ─── RATING BAR ─── -->
+<div class="rating-bar">
+  <div class="rating-bar-inner">
+    <div class="rating-pill-large reveal d1">
+      <div class="rpl-score">5.0</div>
+      <div class="rpl-info">
+        <div class="rpl-platform">Google Reviews</div>
+        <div class="rpl-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <a href="https://g.co/kgs/TGA6pHH" class="rpl-link" target="_blank" rel="noopener">Read on Google ↗</a>
+      </div>
+    </div>
+    <div class="rating-pill-large reveal d2">
+      <div class="rpl-score">5.0</div>
+      <div class="rpl-info">
+        <div class="rpl-platform">Rated People</div>
+        <div class="rpl-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <a href="https://www.ratedpeople.com/profile/rk-gas-safe" class="rpl-link" target="_blank" rel="noopener">Read on Rated People ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── REVIEWS GRID ─── -->
+<section class="section reviews-section">
+  <div class="reveal">
+    <span class="label-tag">CLIENT REVIEWS</span>
+    <h2 class="sec-h2">Every review is real</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal d1">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Google</span>
+      </div>
+      <p class="review-text">"Delighted to have found Robin to service our boiler. He was also able to remedy two further issues that a previous plumber had failed to diagnose correctly. Professional, punctual, and amiable. Highly Recommended."</p>
+      <div class="review-author">Mike <span>— Cheadle</span></div>
+    </div>
+    <div class="review-card reveal d2">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Google</span>
+      </div>
+      <p class="review-text">"Robin came by the same day I called with a concern about my boiler. He fixed it on the day and gave advice on next steps. He followed up the next day to make sure the issue was fully resolved. Great service — would recommend to anyone!"</p>
+      <div class="review-author">Alison <span>— Didsbury</span></div>
+    </div>
+    <div class="review-card reveal d3">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Google</span>
+      </div>
+      <p class="review-text">"Robin came by the same day I called. He fixed it on the day and was really reassuring during his visit. Excellent service — highly recommended."</p>
+      <div class="review-author">Richard <span>— Didsbury</span></div>
+    </div>
+    <div class="review-card reveal d1">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Google</span>
+      </div>
+      <p class="review-text">"Used Robin for a boiler service and was really impressed. On time, thorough, and explained everything clearly. Much better than the big national companies we've used before."</p>
+      <div class="review-author">Sarah <span>— Chorlton</span></div>
+    </div>
+    <div class="review-card reveal d2">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Rated People</span>
+      </div>
+      <p class="review-text">"Brilliant service. Dom was friendly, professional and sorted the problem quickly. Fair price with no nasty surprises. Will definitely use again."</p>
+      <div class="review-author">James <span>— Stockport</span></div>
+    </div>
+    <div class="review-card reveal d3">
+      <div class="review-card-top">
+        <div class="review-stars">
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="rstar" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <span class="platform-badge">Google</span>
+      </div>
+      <p class="review-text">"Had Robin out for a repair after our boiler stopped working in January. He diagnosed the issue quickly, had the part with him, and had us back up and running within the hour. Brilliant."</p>
+      <div class="review-author">Karen <span>— Altrincham</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LEAVE A REVIEW ─── -->
+<section class="leave-review-section reveal">
+  <h2>Happy with our work?</h2>
+  <p>Leaving a review makes a huge difference to a small local business. It takes two minutes and helps other South Manchester homeowners find us.</p>
+  <div class="review-btns">
+    <a href="https://g.co/kgs/TGA6pHH" target="_blank" rel="noopener" class="btn-olive">Review on Google</a>
+    <a href="https://www.ratedpeople.com/profile/rk-gas-safe" target="_blank" rel="noopener" class="btn-outline">Review on Rated People</a>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ─── -->
+<section class="cta-band">
+  <div class="cta-ghost">CALL NOW</div>
+  <h2>Get Your Boiler<br/>Sorted Today</h2>
+  <div class="cta-band-right">
+    <a href="tel:07921193353" class="cta-phone-hero">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      <span>07921 193 353</span>
+    </a>
+    <div class="cta-btn-row">
+      <a href="contact.html" class="btn-cream">Book Online</a>
+      <a href="mailto:robin@didsburyboilerservice.co.uk" class="btn-outline-cream">Email Us</a>
+    </div>
+    <p class="cta-note">Same-day response available · Gas Safe Registered</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo.png" alt="Didsbury Boiler" class="f-logo-img"/>
+        <span class="f-brand-name">Didsbury Boiler</span>
+      </div>
+      <p class="f-tagline">Servicing &amp; Repair · South Manchester</p>
+      <p class="f-desc">Independent Gas Safe registered engineers. Honest, reliable boiler servicing and repair across South Manchester.</p>
+      <div class="f-social">
+        <a href="https://www.facebook.com/profile.php?id=100090288853644" target="_blank" rel="noopener" class="fsoc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/rkgassafe/" target="_blank" rel="noopener" class="fsoc" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+        <a href="https://www.youtube.com/@DidsburyBoilerService" target="_blank" rel="noopener" class="fsoc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:var(--olive)"/></svg></a>
+        <a href="https://g.co/kgs/TGA6pHH" target="_blank" rel="noopener" class="fsoc" aria-label="Google"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93A8.01 8.01 0 0 1 4.07 13H6v-2H4.07A8.01 8.01 0 0 1 11 4.07V6h2V4.07A8.01 8.01 0 0 1 19.93 11H18v2h1.93A8.01 8.01 0 0 1 13 19.93z"/></svg></a>
+        <a href="https://www.ratedpeople.com/profile/rk-gas-safe" target="_blank" rel="noopener" class="fsoc" aria-label="Rated People"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navigation</h4>
+      <ul class="f-links">
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="areas.html">Areas Covered</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul class="f-links">
+        <li><a href="services.html">Annual Service</a></li><li><a href="services.html">Boiler Repair</a></li><li><a href="services.html">Breakdown Response</a></li><li><a href="services.html">New Installation</a></li><li><a href="services.html">Pressure Problems</a></li><li><a href="faqs.html">Error Code Guide</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <div class="f-contact-line">
+        <a href="tel:07921193353">07921 193 353</a>
+        <a href="mailto:robin@didsburyboilerservice.co.uk">robin@didsburyboilerservice.co.uk</a>
+        <span>567a Wilmslow Rd<br/>Didsbury, Manchester M20 3QH</span>
+      </div>
+      <a href="https://g.co/kgs/TGA6pHH" class="f-google-link" target="_blank" rel="noopener">★ 5.0 on Google</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Didsbury Boiler Servicing &amp; Repair. RK Gas Safe Registered. All Rights Reserved.</p>
+    <div class="footer-legal">
+      <a href="https://www.didsburyboilerservice.co.uk/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/site-map" target="_blank" rel="noopener">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => { if (a.getAttribute('href') === currentPage) a.classList.add('active'); });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+const ro = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
+

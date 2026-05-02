@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Boiler servicing, repair, breakdown response and new installation in South Manchester. Transparent pricing from Gas Safe registered engineers."/>
+<meta property="og:title" content="Services | Didsbury Boiler Servicing & Repair"/>
+<meta property="og:description" content="Annual boiler service from ~£100. Repairs from £150. Gas Safe registered, no hidden fees."/>
+<title>Services | Didsbury Boiler Servicing & Repair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<style>
+:root{
+  --olive:#2E3B1E;--olive-mid:#3A4A26;--olive-light:#4A5E30;
+  --cream:#F0EBE1;--cream2:#E8E0D4;--cream3:#DDD4C6;--cream4:#D4C9B8;
+  --white:#FDFAF6;--ink:#1A1A14;--ink2:#4A4840;--ink3:#7A7568;
+  --amber:#D4A024;--border:rgba(26,26,20,0.10);
+  --font-head:'Epilogue',sans-serif;--font-body:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);--ease2:cubic-bezier(0.16,1,0.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* ─── NAVBAR ─── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;padding:0 48px;background:var(--white);border-bottom:1px solid var(--border);transition:all .35s var(--ease)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-img{height:36px;width:auto;object-fit:contain;display:block}
+.nav-brand{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--olive);letter-spacing:-.01em;white-space:nowrap}
+.nav-divider{width:1px;height:28px;background:var(--border);margin:0 18px;flex-shrink:0}
+.nav-tagline{font-size:12px;color:var(--ink3);letter-spacing:.02em;white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;margin-left:auto;margin-right:16px}
+.nav-links a{display:flex;align-items:center;gap:4px;text-decoration:none;color:var(--ink2);font-size:13.5px;font-weight:500;padding:6px 14px;border-radius:20px;transition:all .2s;letter-spacing:.01em;white-space:nowrap}
+.nav-links a:hover{background:rgba(46,59,30,.07);color:var(--olive)}
+.nav-links a .plus{font-size:11px;opacity:.6}
+.nav-links a.active{color:var(--olive);font-weight:700}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-phone{font-size:13.5px;font-weight:600;color:var(--ink2);text-decoration:none}
+.nav-phone:hover{color:var(--olive)}
+.nav-cta{background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 22px;border-radius:30px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.hamburger span{display:block;width:22px;height:2px;background:var(--olive);margin:5px 0;transition:all .3s;border-radius:2px}
+
+/* ─── MOBILE MENU ─── */
+.mobile-menu{position:fixed;inset:0;z-index:300;background:var(--olive);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;font-size:24px;color:rgba(255,255,255,.7);line-height:1}
+.mobile-close:hover{color:var(--white)}
+.mobile-menu ul{list-style:none;text-align:center;padding:0}
+.mobile-menu ul li{margin-bottom:12px}
+.mobile-menu ul li a{font-family:var(--font-head);font-weight:800;font-size:36px;color:white;text-decoration:none;text-transform:uppercase;letter-spacing:-.02em;transition:color .2s}
+.mobile-menu ul li a:hover{color:var(--amber)}
+.mobile-phone{color:rgba(255,255,255,.65);font-size:17px;font-weight:500;text-decoration:none;margin-top:8px}
+
+/* ─── PAGE HERO ─── */
+.page-hero{background:var(--olive);padding:120px 48px 80px;position:relative;overflow:hidden;min-height:320px;display:flex;align-items:flex-end}
+.page-hero-ghost{position:absolute;bottom:-20px;right:-10px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.page-hero-inner{position:relative;z-index:2;max-width:680px}
+.page-hero .label-tag{color:rgba(255,255,255,.45);margin-bottom:12px}
+.page-hero h1{font-family:var(--font-head);font-weight:900;font-size:clamp(40px,6vw,72px);line-height:1.0;letter-spacing:-.03em;color:var(--white);text-transform:uppercase;margin-bottom:20px}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;max-width:520px}
+
+/* ─── SECTION BASE ─── */
+.section{padding:100px 48px}
+.label-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.sec-h2{font-family:var(--font-head);font-weight:800;font-size:clamp(34px,4.5vw,56px);line-height:1.02;letter-spacing:-.025em;color:var(--ink);margin-bottom:20px}
+.sec-h2.on-dark{color:var(--white)}
+.sec-lead{font-size:16px;color:var(--ink2);max-width:560px;line-height:1.7}
+.btn-olive{display:inline-flex;align-items:center;gap:8px;background:var(--olive);color:var(--white);font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:30px;text-decoration:none;border:none;cursor:pointer;transition:all .25s var(--ease)}
+.btn-olive:hover{background:var(--olive-light);transform:translateY(-2px)}
+
+/* ─── PRICING ─── */
+.pricing-section{background:var(--olive);padding:100px 48px;position:relative;overflow:hidden}
+.pricing-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-head);font-weight:900;font-size:clamp(80px,16vw,240px);color:rgba(255,255,255,.04);white-space:nowrap;letter-spacing:-.04em;pointer-events:none;user-select:none}
+.pricing-inner{position:relative;z-index:1}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.price-card{border-radius:16px;padding:36px 32px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);transition:background .3s}
+.price-card.featured{background:var(--white);border-color:transparent}
+.price-card:not(.featured):hover{background:rgba(255,255,255,.11)}
+.plabel{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
+.price-card.featured .plabel{color:var(--ink3)}
+.pname{font-family:var(--font-head);font-weight:800;font-size:28px;color:var(--white);margin-bottom:6px;letter-spacing:-.015em}
+.price-card.featured .pname{color:var(--olive)}
+.pamount{font-family:var(--font-head);font-weight:900;font-size:60px;line-height:1;color:var(--white);letter-spacing:-.04em;margin:18px 0 8px}
+.price-card.featured .pamount{color:var(--olive)}
+.pdesc{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px;line-height:1.6}
+.price-card.featured .pdesc{color:var(--ink3)}
+.price-divider{height:1px;background:rgba(255,255,255,.12);margin-bottom:24px}
+.price-card.featured .price-divider{background:var(--border)}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:12px}
+.price-features li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.75)}
+.price-card.featured .price-features li{color:var(--ink2)}
+.price-features li svg{width:16px;height:16px;fill:rgba(255,255,255,.55);flex-shrink:0}
+.price-card.featured .price-features li svg{fill:var(--olive)}
+.price-cta{display:block;margin-top:28px;text-align:center;padding:14px;border-radius:8px;font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .25s;border:1.5px solid rgba(255,255,255,.25);color:var(--white)}
+.price-card.featured .price-cta{background:var(--olive);color:var(--white);border-color:var(--olive)}
+.price-cta:hover{background:var(--white);color:var(--olive);border-color:var(--white)}
+.price-card.featured .price-cta:hover{background:var(--olive-light);color:var(--white);border-color:var(--olive-light)}
+
+/* ─── SERVICES GRID ─── */
+.services-section{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden;margin-top:48px}
+.svc-card{background:var(--white);padding:36px 30px;transition:background .25s;position:relative;cursor:default}
+.svc-card:hover{background:var(--olive)}
+.svc-num{font-family:var(--font-head);font-weight:900;font-size:11px;letter-spacing:.12em;color:var(--ink3);margin-bottom:20px;transition:color .25s}
+.svc-card:hover .svc-num{color:rgba(255,255,255,.4)}
+.svc-icon{width:44px;height:44px;background:var(--cream);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .25s}
+.svc-card:hover .svc-icon{background:rgba(255,255,255,.15)}
+.svc-icon svg{width:22px;height:22px;fill:var(--olive);transition:fill .25s}
+.svc-card:hover .svc-icon svg{fill:var(--white)}
+.svc-card h3{font-family:var(--font-head);font-weight:700;font-size:19px;letter-spacing:-.01em;margin-bottom:10px;color:var(--ink);transition:color .25s}
+.svc-card:hover h3{color:var(--white)}
+.svc-card p{font-size:13.5px;color:var(--ink2);line-height:1.65;transition:color .25s}
+.svc-card:hover p{color:rgba(255,255,255,.72)}
+
+/* ─── BRANDS ─── */
+.brands-section{background:var(--cream)}
+.brand-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.brand-pill{background:var(--cream2);border:1px solid var(--border);border-radius:30px;padding:8px 18px;font-size:13.5px;font-weight:500;color:var(--ink2);transition:all .2s}
+.brand-pill:hover{background:var(--olive);color:var(--white);border-color:var(--olive)}
+.brands-note{margin-top:20px;font-size:14px;color:var(--ink3)}
+
+/* ─── WHY US ─── */
+.why-section{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.why-card{background:var(--cream);border-radius:16px;padding:36px 28px;border:1px solid var(--border)}
+.why-icon{width:48px;height:48px;background:var(--olive);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.why-icon svg{width:22px;height:22px;fill:var(--white)}
+.why-card h3{font-family:var(--font-head);font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px}
+.why-card p{font-size:14px;color:var(--ink2);line-height:1.65}
+
+/* ─── STEPS ─── */
+.steps-section{background:var(--cream);padding:80px 48px 100px}
+.steps-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;gap:24px;flex-wrap:wrap}
+.steps-h2{font-family:var(--font-head);font-weight:800;font-size:clamp(28px,4vw,48px);line-height:1.05;letter-spacing:-.025em;color:var(--ink);max-width:480px}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.step-card{border-radius:16px;padding:28px 24px 36px}
+.step-card:nth-child(1){background:#E8DDD0}
+.step-card:nth-child(2){background:#DDD4C6;margin-top:40px}
+.step-card:nth-child(3){background:#D4C9B8}
+.step-card:nth-child(4){background:#CBBFAC;margin-top:40px}
+.step-badge{display:inline-flex;background:var(--olive);color:var(--white);font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;margin-bottom:52px;letter-spacing:.04em}
+.step-card h3{font-family:var(--font-head);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+.step-card p{font-size:13.5px;color:var(--ink2);line-height:1.65}
+
+/* ─── CTA BAND ─── */
+.cta-band{background:var(--olive);padding:80px 48px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-ghost{position:absolute;bottom:-20px;right:-20px;font-family:var(--font-head);font-weight:900;font-size:clamp(70px,12vw,180px);color:rgba(255,255,255,.04);letter-spacing:-.04em;text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+.cta-band h2{font-family:var(--font-head);font-weight:900;font-size:clamp(34px,5vw,62px);color:var(--white);letter-spacing:-.03em;text-transform:uppercase;line-height:.95;position:relative;z-index:1}
+.cta-band-right{display:flex;flex-direction:column;gap:16px;align-items:flex-start;position:relative;z-index:1}
+.cta-phone-hero{display:flex;align-items:center;gap:12px;text-decoration:none}
+.cta-phone-hero svg{width:22px;height:22px;fill:rgba(255,255,255,.7)}
+.cta-phone-hero span{font-family:var(--font-head);font-weight:900;font-size:clamp(26px,4vw,44px);color:var(--white);letter-spacing:-.025em}
+.cta-btn-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn-cream{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--olive);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:13px 28px;border-radius:30px;text-decoration:none;transition:all .25s}
+.btn-cream:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.btn-outline-cream{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.85);font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 28px;border-radius:30px;border:1.5px solid rgba(255,255,255,.3);text-decoration:none;transition:all .25s}
+.btn-outline-cream:hover{border-color:var(--white);color:var(--white)}
+.cta-note{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.02em}
+
+/* ─── FOOTER ─── */
+footer{background:var(--olive);color:var(--white);padding:72px 48px 0}
+.footer-inner{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.f-logo-img{height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85}
+.f-brand-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--white);letter-spacing:-.01em}
+.f-tagline{font-size:11.5px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.f-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:20px;max-width:300px}
+.f-social{display:flex;gap:8px}
+.fsoc{width:34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s}
+.fsoc:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.1)}
+.fsoc svg{width:15px;height:15px;fill:rgba(255,255,255,.55)}
+.f-col h4{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:rgba(255,255,255,.92)}
+.f-contact-line{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.f-contact-line a,.f-contact-line span{font-size:13.5px;color:rgba(255,255,255,.58);text-decoration:none;line-height:1.5}
+.f-contact-line a:hover{color:rgba(255,255,255,.92)}
+.f-google-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--amber);text-decoration:none;font-weight:600}
+.f-google-link:hover{text-decoration:underline}
+.footer-bottom{padding:22px 0 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-legal{display:flex;gap:18px}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.65)}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .pricing-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .navbar{padding:0 20px}
+  .nav-links,.nav-divider,.nav-tagline,.nav-phone{display:none!important}
+  .hamburger{display:block!important}
+  .page-hero{padding:100px 20px 60px}
+  .section,.steps-section,.pricing-section{padding-left:20px;padding-right:20px}
+  .services-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .step-card:nth-child(2),.step-card:nth-child(4){margin-top:0}
+  .why-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .cta-band{padding:60px 20px;flex-direction:column}
+  footer{padding:60px 20px 0}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  .steps-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Didsbury Boiler" class="nav-logo-img"/>
+    <span class="nav-brand">Didsbury Boiler</span>
+  </a>
+  <div class="nav-divider"></div>
+  <span class="nav-tagline">Gas Safe Registered Engineers</span>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="plus">+</span> Home</a></li>
+    <li><a href="about.html"><span class="plus">+</span> About</a></li>
+    <li><a href="services.html"><span class="plus">+</span> Services</a></li>
+    <li><a href="areas.html"><span class="plus">+</span> Areas</a></li>
+    <li><a href="reviews.html"><span class="plus">+</span> Reviews</a></li>
+    <li><a href="faqs.html"><span class="plus">+</span> FAQs</a></li>
+    <li><a href="contact.html"><span class="plus">+</span> Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:07921193353" class="nav-phone">07921 193 353</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="areas.html">Areas</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:07921193353" class="mobile-phone">07921 193 353</a>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<section class="page-hero">
+  <div class="page-hero-ghost">SERVICES</div>
+  <div class="page-hero-inner">
+    <span class="label-tag">WHAT WE DO</span>
+    <h1>Expert Boiler Services Delivered Right</h1>
+    <p>Gas Safe registered engineers serving South Manchester. All brands, transparent pricing, honest advice.</p>
+  </div>
+</section>
+
+<!-- ─── PRICING ─── -->
+<section class="pricing-section">
+  <div class="pricing-ghost">PRICING</div>
+  <div class="pricing-inner">
+    <div class="reveal">
+      <span class="label-tag on-dark">TRANSPARENT PRICING</span>
+      <h2 class="sec-h2 on-dark">No Surprises, No Hidden Fees</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card featured reveal d1">
+        <div class="plabel">Most Popular</div>
+        <div class="pname">Annual Service</div>
+        <div class="pamount">~£100</div>
+        <div class="pdesc">A thorough safety and efficiency check. Includes Gas Safe documentation.</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full boiler safety inspection</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Efficiency and pressure check</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Gas Safe certificate issued</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Flue and ventilation check</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> All major brands covered</li>
+        </ul>
+        <a href="contact.html" class="price-cta">Book a Service</a>
+      </div>
+      <div class="price-card reveal d2">
+        <div class="plabel">Repairs &amp; Breakdowns</div>
+        <div class="pname">Boiler Repair</div>
+        <div class="pamount">£150–400</div>
+        <div class="pdesc">Includes callout and diagnosis. We carry parts for most common faults.</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Same-day response available</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> No callout charge surprise</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 90%+ first-visit fix rate</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Upfront quote before work starts</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Follow-up to confirm all good</li>
+        </ul>
+        <a href="tel:07921193353" class="price-cta">Call 07921 193 353</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FULL SERVICES GRID ─── -->
+<section class="section services-section">
+  <div class="reveal">
+    <span class="label-tag">WHAT WE DO</span>
+    <h2 class="sec-h2">All Our Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card reveal d1">
+      <div class="svc-num">01</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+      <h3>Annual Boiler Service</h3>
+      <p>A full safety and efficiency check to keep your boiler running reliably all year. Includes a Gas Safe certificate on completion.</p>
+    </div>
+    <div class="svc-card reveal d2">
+      <div class="svc-num">02</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <h3>Boiler Repair</h3>
+      <p>Fast diagnosis and repair across all major brands. We give you an upfront quote before starting — no nasty surprises on the bill.</p>
+    </div>
+    <div class="svc-card reveal d3">
+      <div class="svc-num">03</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+      <h3>Breakdown Response</h3>
+      <p>Boiler stopped working? We offer same-day or next-day response to breakdowns across South Manchester and surrounding areas.</p>
+    </div>
+    <div class="svc-card reveal d1">
+      <div class="svc-num">04</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <h3>New Installation</h3>
+      <p>Replacing an old, inefficient or unreliable boiler. We advise on the right unit for your home, supply it, fit it and commission it properly. Contact for quote.</p>
+    </div>
+    <div class="svc-card reveal d2">
+      <div class="svc-num">05</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <h3>Pressure Problems</h3>
+      <p>Low or high boiler pressure? We find the root cause — whether it's a leak, a faulty PRV, or an expansion vessel issue — and fix it properly.</p>
+    </div>
+    <div class="svc-card reveal d3">
+      <div class="svc-num">06</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div>
+      <h3>All Boiler Brands</h3>
+      <p>Worcester Bosch, Baxi, Vaillant, Ideal, Viessmann, Potterton, Glow Worm, Alpha, Remeha, Navien, Intergas and many more — we know them inside out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BRANDS ─── -->
+<section class="section brands-section">
+  <div class="reveal">
+    <span class="label-tag">BRANDS WE WORK ON</span>
+    <h2 class="sec-h2">We service and repair all major brands</h2>
+  </div>
+  <div class="brand-cloud reveal">
+    <span class="brand-pill">Baxi</span>
+    <span class="brand-pill">Worcester Bosch</span>
+    <span class="brand-pill">Ideal</span>
+    <span class="brand-pill">Vaillant</span>
+    <span class="brand-pill">Viessmann</span>
+    <span class="brand-pill">Glow Worm</span>
+    <span class="brand-pill">Ravenheat</span>
+    <span class="brand-pill">Biasi</span>
+    <span class="brand-pill">Ferroli</span>
+    <span class="brand-pill">Vokera</span>
+    <span class="brand-pill">Main</span>
+    <span class="brand-pill">Potterton</span>
+    <span class="brand-pill">Ariston</span>
+    <span class="brand-pill">Alpha</span>
+    <span class="brand-pill">Remeha</span>
+    <span class="brand-pill">ATAG</span>
+    <span class="brand-pill">Navien</span>
+    <span class="brand-pill">Intergas</span>
+  </div>
+  <p class="brands-note reveal">Don't see your brand? Call us — if it's a gas boiler, we can almost certainly help.</p>
+</section>
+
+<!-- ─── WHY CHOOSE US ─── -->
+<section class="section why-section">
+  <div class="reveal">
+    <span class="label-tag">WHY CHOOSE US</span>
+    <h2 class="sec-h2">Built on trust, backed by results</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal d1">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+      <h3>Gas Safe Registered</h3>
+      <p>We're fully Gas Safe registered under RK Gas Safe — giving you legal peace of mind and proof that the work is done to the highest standard.</p>
+    </div>
+    <div class="why-card reveal d2">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+      <h3>Honest Advice</h3>
+      <p>We tell you what you need — not what makes us the most money. If your boiler just needs a service, that's what we'll say. No upselling, ever.</p>
+    </div>
+    <div class="why-card reveal d3">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <h3>First-Visit Fix</h3>
+      <p>We carry parts for the most common faults on every call. Our 90%+ first-visit fix rate means your home is back up and running quickly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4-STEP PROCESS ─── -->
+<section class="steps-section">
+  <div class="steps-header reveal">
+    <h2 class="steps-h2">Get your boiler sorted in 4 easy steps</h2>
+    <a href="contact.html" class="btn-olive">Book Now</a>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card reveal d1"><div class="step-badge">Step 1</div><h3>Contact Us</h3><p>Call or fill in our contact form. We'll ask a few questions about your boiler and the issue.</p></div>
+    <div class="step-card reveal d2"><div class="step-badge">Step 2</div><h3>Schedule a Visit</h3><p>We'll book a time — often same day or next. We keep you informed throughout.</p></div>
+    <div class="step-card reveal d3"><div class="step-badge">Step 3</div><h3>We Fix It</h3><p>Our engineers diagnose and fix on the spot. We carry parts for most common faults.</p></div>
+    <div class="step-card reveal d4"><div class="step-badge">Step 4</div><h3>All Done</h3><p>We leave clean, explain what was done, and follow up to make sure everything runs smoothly.</p></div>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ─── -->
+<section class="cta-band">
+  <div class="cta-ghost">CALL NOW</div>
+  <h2>Get Your Boiler<br/>Sorted Today</h2>
+  <div class="cta-band-right">
+    <a href="tel:07921193353" class="cta-phone-hero">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      <span>07921 193 353</span>
+    </a>
+    <div class="cta-btn-row">
+      <a href="contact.html" class="btn-cream">Book Online</a>
+      <a href="mailto:robin@didsburyboilerservice.co.uk" class="btn-outline-cream">Email Us</a>
+    </div>
+    <p class="cta-note">Same-day response available · Gas Safe Registered</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo.png" alt="Didsbury Boiler" class="f-logo-img"/>
+        <span class="f-brand-name">Didsbury Boiler</span>
+      </div>
+      <p class="f-tagline">Servicing &amp; Repair · South Manchester</p>
+      <p class="f-desc">Independent Gas Safe registered engineers. Honest, reliable boiler servicing and repair across South Manchester.</p>
+      <div class="f-social">
+        <a href="https://www.facebook.com/profile.php?id=100090288853644" target="_blank" rel="noopener" class="fsoc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/rkgassafe/" target="_blank" rel="noopener" class="fsoc" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.youtube.com/@DidsburyBoilerService" target="_blank" rel="noopener" class="fsoc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:var(--olive)"/></svg></a>
+        <a href="https://g.co/kgs/TGA6pHH" target="_blank" rel="noopener" class="fsoc" aria-label="Google Reviews"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93A8.01 8.01 0 0 1 4.07 13H6v-2H4.07A8.01 8.01 0 0 1 11 4.07V6h2V4.07A8.01 8.01 0 0 1 19.93 11H18v2h1.93A8.01 8.01 0 0 1 13 19.93z"/></svg></a>
+        <a href="https://www.ratedpeople.com/profile/rk-gas-safe" target="_blank" rel="noopener" class="fsoc" aria-label="Rated People"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navigation</h4>
+      <ul class="f-links">
+        <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="areas.html">Areas Covered</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul class="f-links">
+        <li><a href="services.html">Annual Service</a></li><li><a href="services.html">Boiler Repair</a></li><li><a href="services.html">Breakdown Response</a></li><li><a href="services.html">New Installation</a></li><li><a href="services.html">Pressure Problems</a></li><li><a href="faqs.html">Error Code Guide</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <div class="f-contact-line">
+        <a href="tel:07921193353">07921 193 353</a>
+        <a href="mailto:robin@didsburyboilerservice.co.uk">robin@didsburyboilerservice.co.uk</a>
+        <span>567a Wilmslow Rd<br/>Didsbury, Manchester M20 3QH</span>
+      </div>
+      <a href="https://g.co/kgs/TGA6pHH" class="f-google-link" target="_blank" rel="noopener">★ 5.0 on Google</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Didsbury Boiler Servicing &amp; Repair. RK Gas Safe Registered. All Rights Reserved.</p>
+    <div class="footer-legal">
+      <a href="https://www.didsburyboilerservice.co.uk/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+      <a href="https://www.didsburyboilerservice.co.uk/site-map" target="_blank" rel="noopener">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => { if (a.getAttribute('href') === currentPage) a.classList.add('active'); });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
+
